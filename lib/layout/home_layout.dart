@@ -7,11 +7,13 @@ import 'package:conditional_builder_null_safety/conditional_builder_null_safety.
 import 'drawer.dart';
 
 class HomeLayout extends StatelessWidget {
-  var scaffoldKey = GlobalKey<ScaffoldState>();
-  var formKey = GlobalKey<FormState>();
-  var titleController = TextEditingController();
-  var timeController = TextEditingController();
-  var dateController = TextEditingController();
+  final scaffoldKey = GlobalKey<ScaffoldState>();
+  final formKey = GlobalKey<FormState>();
+  final titleController = TextEditingController();
+  final timeController = TextEditingController();
+  final dateController = TextEditingController();
+
+  HomeLayout({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -190,7 +192,7 @@ class HomeLayout extends StatelessWidget {
               },
               currentIndex: cubit.currentIndex,
             ),
-            drawer: MyDrawer(),
+            drawer: const MyDrawer(),
           );
         },
       ),
