@@ -38,6 +38,8 @@ class HomeLayout extends StatelessWidget {
               elevation: 0.0,
             ),
             floatingActionButton: FloatingActionButton(
+              backgroundColor: Colors.blue,
+              foregroundColor: Colors.white,
               onPressed: () {
                 if (cubit.isBottomSheetShown) {
                   if (formKey.currentState!.validate()) {

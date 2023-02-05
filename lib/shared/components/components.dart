@@ -9,55 +9,60 @@ Widget buildTaskItem(Map model, context) {
       padding: const EdgeInsets.all(20.0),
       child: Row(
         children: [
-          Expanded(
-            child: Container(
-              decoration: BoxDecoration(
-                  color: Colors.blue[400],
-                  borderRadius: BorderRadius.circular(15)),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Text(
-                    '${model['title']}',
-                    style: const TextStyle(
-                        fontSize: 30,
-                        fontWeight: FontWeight.bold,
-                        color: Colors.white),
-                  ),
-                  const SizedBox(
-                    height: 7,
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      const Text('Time:',
-                          style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white)),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      Text('${model['time']}',
-                          style: const TextStyle(
-                              fontSize: 15, color: Colors.white)),
-                      const SizedBox(
-                        width: 10,
-                      ),
-                      const Text('Date:',
-                          style: TextStyle(
-                              fontSize: 15,
-                              fontWeight: FontWeight.bold,
-                              color: Colors.white)),
-                      const SizedBox(
-                        width: 5,
-                      ),
-                      Text('${model['date']}',
-                          style: const TextStyle(
-                              fontSize: 15, color: Colors.white)),
-                    ],
-                  ),
-                ],
+          Container(
+            decoration: BoxDecoration(
+                color: Colors.blue[400],
+                borderRadius: BorderRadius.circular(15)),
+            child: Expanded(
+              child: Card(
+                color: Colors.transparent,
+                elevation: 0,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Text(
+                      '${model['title']}',
+                      style: const TextStyle(
+                          fontSize: 30,
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white),
+                    ),
+                    const SizedBox(
+                      height: 7,
+                    ),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        const Text('Time:',
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white),
+                        ),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        Text('${model['time']}',
+                            style: const TextStyle(
+                                fontSize: 15, color: Colors.white)),
+                        const SizedBox(
+                          width: 10,
+                        ),
+                        const Text('Date:',
+                            style: TextStyle(
+                                fontSize: 15,
+                                fontWeight: FontWeight.bold,
+                                color: Colors.white)),
+                        const SizedBox(
+                          width: 5,
+                        ),
+                        Text('${model['date']}',
+                            style: const TextStyle(
+                                fontSize: 15, color: Colors.white)),
+                      ],
+                    ),
+                  ],
+                ),
               ),
             ),
           ),
